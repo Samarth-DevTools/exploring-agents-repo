@@ -2,7 +2,7 @@ pipeline {
   agent any
  
   stages {
-    stage('Stage-1') {
+    stage('S1-Any Agent') {
       steps {
         sh 'cat /etc/os-release'
         sh 'node -v'
@@ -10,7 +10,7 @@ pipeline {
       }
     }
     
-    stage('Stage-2') {
+    stage('S2-Ubuntu Agent') {
       agent { 
           label 'ubuntu-20-docker'
       }
