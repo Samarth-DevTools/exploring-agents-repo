@@ -38,8 +38,8 @@ pipeline {
 
     stage('S4- Dockerfile agent') {
       agent {
-        docker {
-          image 'node:18'
+        dockerfile {
+          filename 'Dockerfile.cowsay'
           label 'ubuntu-docker-jdk17-node20'
         }
       }
