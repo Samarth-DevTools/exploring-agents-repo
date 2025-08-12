@@ -43,6 +43,7 @@ pipeline {
           label 'ubuntu-docker-jdk17-node20'
           image 'node:18'
         }
+      }
       steps {
         sh ' node -v '
         sh ' npm -v '
