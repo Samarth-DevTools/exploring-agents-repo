@@ -39,15 +39,14 @@ pipeline {
     stage('S4- Dockerfile agent') {
       agent {
         docker {
-          alwaysPull true
-          label 'ubuntu-docker-jdk17-node20'
           image 'node:18'
+          label 'ubuntu-docker-jdk17-node20'
         }
       }
       steps {
-        sh ' node -v '
-        sh ' npm -v '
-        cowsay -f tux this is running on docker container
+        sh ' ode -v'
+        sh 'npm -v'
+        sh 'cowsay -f tux this is running on docker container'
       }
     }
   }
