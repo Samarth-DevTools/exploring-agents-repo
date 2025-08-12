@@ -24,8 +24,9 @@ pipeline {
     stage('Docker image agent') {
       agent {
         docker {
-          image 'node:18'
+          alwaysPull true
           label 'ubuntu-docker-jdk17-node20'
+          image 'node:18'
         }
       }
       steps{
