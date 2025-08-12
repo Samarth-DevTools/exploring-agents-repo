@@ -44,7 +44,7 @@ pipeline {
         }
       }
       steps {
-        sh ' ode -v'
+        sh 'node -v'
         sh 'npm -v'
         sh 'cowsay -f tux this is running on docker container'
       }
