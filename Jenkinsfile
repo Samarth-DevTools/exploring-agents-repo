@@ -36,7 +36,7 @@ pipeline {
       }
     }
 
-    stage(S4- Dockerfile agent) {
+    stage('S4- Dockerfile agent') {
       agent {
         docker {
           alwaysPull true
