@@ -21,7 +21,7 @@ pipeline {
       }
     }
 
-    stage('Docker image agent') {
+    stage('S3-Docker image agent') {
       agent {
         docker {
           alwaysPull true
@@ -33,6 +33,20 @@ pipeline {
         sh 'cat /etc/os-release'
         sh 'node -v'
         sh 'npm -v'
+      }
+    }
+
+    stage(S4- Dockerfile agent) {
+      agent {
+        docker {
+          alwaysPull true
+          label 'ubuntu-docker-jdk17-node20'
+          image 'node:18'
+        }
+      steps {
+        sh ' node -v '
+        sh ' npm -v '
+        cowsay -f tux this is running on docker container
       }
     }
   }
