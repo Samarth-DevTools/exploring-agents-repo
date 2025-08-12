@@ -12,7 +12,7 @@ pipeline {
     
     stage('S2-Ubuntu Agent') {
       agent { 
-          label 'ubuntu-20-docker'
+          label 'ubuntu-docker-jdk17-node20'
       }
       steps {
         sh 'cat /etc/os-release'
