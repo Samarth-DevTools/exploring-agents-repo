@@ -6,7 +6,11 @@ pipeline {
     }
   }
  
- 
+options {
+  newContainerPerStage()
+}
+
+
   stages {
     stage('Stage-1') {
       steps {
