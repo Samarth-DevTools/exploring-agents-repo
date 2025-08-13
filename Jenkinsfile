@@ -7,19 +7,27 @@ pipeline {
   }
  
   stages {
-    stage('S1-Any Agent') {
+    stage('Stage-1') {
       steps {
         sh 'cat /etc/os-release'
-        sh 'node -v'
-        sh 'npm -v'
+        sh 'node -v
+        sh 'npm -v
+        echo "#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+        sh 'echo $((RANDOM)) > /tmp/imp-file-$BUILD_ID"
+        sh 'ls -ltr/tmp/imp-file-$BUILD_ID'
+        sh cat /tmp/imp-file-$BUILD_ID'
+        echo "#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
       }
-    }
     
     stage('S2-Ubuntu Agent') {
       steps {
         sh 'cat /etc/os-release'
         sh 'node -v'
         sh 'npm -v'
+        echo "#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+        sh 'ls -ltr/tmp/imp-file-$BUILD_ID'
+        sh 'cat /tmp/imp-file-$BUILD_ID'
+        echo "#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
       }
     }
 
@@ -28,6 +36,10 @@ pipeline {
         sh 'cat /etc/os-release'
         sh 'node -v'
         sh 'npm -v'
+        echo "#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+        sh 'ls -ltr/tmp/imp-file-$BUILD_ID'
+        sh 'cat /tmp/imp-file-$BUILD_ID'
+        echo "#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
       }
     }
 
@@ -36,6 +48,11 @@ pipeline {
         sh 'node -v'
         sh 'npm -v'
         sh 'cowsay -f tux this is running on docker container'
+        echo "#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+        sh 'ls -ltr/tmp/imp-file-$BUILD_ID'
+        sh 'cat /tmp/imp-file-$BUILD_ID'
+        echo "#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
+        sh 'sleep 120s'
       }
     }
   }
