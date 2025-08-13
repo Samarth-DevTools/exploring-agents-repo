@@ -15,7 +15,7 @@ pipeline {
         echo "#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*"
         sh 'echo $((RANDOM)) > /tmp/imp-file-$BUILD_ID'
         sh 'ls -ltr/tmp/imp-file-$BUILD_ID'
-        sh cat /tmp/imp-file-$BUILD_ID'
+        sh 'cat /tmp/imp-file-$BUILD_ID'
         echo "#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#"
       }
     }
