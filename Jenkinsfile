@@ -12,11 +12,11 @@ pipeline {
         sh 'cat /etc/os-release'
         sh 'node -v'
         sh 'npm -v'
-        echo "#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+        echo "#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*"
         sh 'echo $((RANDOM)) > /tmp/imp-file-$BUILD_ID'
         sh 'ls -ltr/tmp/imp-file-$BUILD_ID'
         sh cat /tmp/imp-file-$BUILD_ID'
-        echo "#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
+        echo "#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#"
       }
     }
 
@@ -25,10 +25,10 @@ pipeline {
         sh 'cat /etc/os-release'
         sh 'node -v'
         sh 'npm -v'
-        echo "#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+        echo "#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*"
         sh 'ls -ltr/tmp/imp-file-$BUILD_ID'
         sh 'cat /tmp/imp-file-$BUILD_ID'
-        echo "#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
+        echo "#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#"
       }
     }
 
@@ -37,10 +37,10 @@ pipeline {
         sh 'cat /etc/os-release'
         sh 'node -v'
         sh 'npm -v'
-        echo "#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+        echo "#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*"
         sh 'ls -ltr/tmp/imp-file-$BUILD_ID'
         sh 'cat /tmp/imp-file-$BUILD_ID'
-        echo "#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
+        echo "#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#"
       }
     }
 
@@ -49,10 +49,10 @@ pipeline {
         sh 'node -v'
         sh 'npm -v'
         sh 'cowsay -f tux this is running on docker container'
-        echo "#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+        echo "#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*"
         sh 'ls -ltr/tmp/imp-file-$BUILD_ID'
         sh 'cat /tmp/imp-file-$BUILD_ID'
-        echo "#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
+        echo "#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#"
         sh 'sleep 120s'
       }
     }
